@@ -1,0 +1,5 @@
+# Aquí se añaden las reglas de R8 propias del proyecto.
+# AGP junta todos los archivos de reglas de src/main/keepRules y se los pasa a R8.
+#
+# Más información en:
+#   https://d.android.com/r/tools/r8/keep-rules

@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema base de la aplicación. -->
+    <style name="Base.Theme.CafePunto" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/cafe_principal</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <item name="colorPrimaryContainer">@color/cafe_contenedor</item>
+        <item name="colorOnPrimaryContainer">@color/cafe_oscuro</item>
+        <item name="colorSecondary">@color/crema</item>
+        <item name="colorOnSecondary">@color/cafe_oscuro</item>
+        <item name="android:colorBackground">@color/fondo</item>
+        <item name="colorSurface">@color/fondo</item>
+    </style>
+
+    <style name="Theme.CafePunto" parent="Base.Theme.CafePunto" />
+</resources>

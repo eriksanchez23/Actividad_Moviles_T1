@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/grafico_navegacion"
+    app:startDestination="@id/FragmentoUno">
+
+    <fragment
+        android:id="@+id/FragmentoUno"
+        android:name="com.dam.cafepunto.Primer_Fragmento"
+        android:label="Primer Fragmento"
+        tools:layout="@layout/fragmento_primero">
+
+        <action
+            android:id="@+id/accion_uno_a_dos"
+            app:destination="@id/FragmentoDos" />
+        <action
+            android:id="@+id/accion_uno_a_tres"
+            app:destination="@id/FragmentoTres" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FragmentoDos"
+        android:name="com.dam.cafepunto.Segundo_Fragmento"
+        android:label="Segundo Fragmento"
+        tools:layout="@layout/fragmento_segundo">
+
+        <action
+            android:id="@+id/accion_dos_a_tres"
+            app:destination="@id/FragmentoTres" />
+        <action
+            android:id="@+id/accion_dos_a_cuatro"
+            app:destination="@id/FragmentoCuatro" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FragmentoTres"
+        android:name="com.dam.cafepunto.Tercer_Fragmento"
+        android:label="Tercer Fragmento"
+        tools:layout="@layout/fragmento_tercero">
+
+        <action
+            android:id="@+id/accion_tres_a_dos"
+            app:destination="@id/FragmentoDos" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FragmentoCuatro"
+        android:name="com.dam.cafepunto.Cuarto_Fragmento"
+        android:label="Cuarto Fragmento"
+        tools:layout="@layout/fragmento_cuarto">
+
+        <action
+            android:id="@+id/accion_cuatro_a_dos"
+            app:destination="@id/FragmentoDos" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="nombre_app">CaféPunto</string>
+    <string name="no_recuerdo_mi_contrasena">I forgot my password</string>
+    <string name="acceder">Log In</string>
+    <string name="registrate">Register</string>
+    <string name="correo_electronico">Email Address</string>
+    <string name="contrasena">Password</string>
+    <string name="logo">Logo</string>
+    <string name="nombre">Name</string>
+    <string name="telefono">Phone Number</string>
+    <string name="icono_cargando">Loading icon</string>
+    <string name="mandar_correo_cambiar_contrasena">Send email to reset password</string>
+    <string name="iniciar_sesion">Log In</string>
+</resources>
