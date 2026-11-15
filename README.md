@@ -8,7 +8,7 @@ App Android con una única activity (`MainActivity` + `FragmentContainerView`) y
 com.dam.cafepunto
 ├── MainActivity.kt            Activity única; solo Registro permite girar la pantalla
 ├── data/                      Modelo
-│   ├── UsuarioRepositorio.kt  Usuarios en memoria (usuario de prueba: demo@cafepunto.com / 123456)
+│   ├── UsuarioRepositorio.kt  Usuario de prueba para el login: demo@cafepunto.com / 123456
 │   └── Validador.kt           Funciones de validación de campos
 └── ui/                        Vista + ViewModel
     ├── inicio/                InicioFragment
