@@ -58,7 +58,10 @@ class RecuperarFragment : Fragment() {
         }
         if (estado.correoEnviado) {
             viewModel.onEvent(RecuperarUiEvent.NavegacionRealizada)
-            findNavController().navigate(R.id.accion_recuperar_a_login)
+            // Avoid navigating twice if the button is tapped again during the transition
+            if (findNavController().currentDestination?.id == R.id.recuperarFragment) {
+                findNavController().navigate(R.id.accion_recuperar_a_login)
+            }
         }
     }
 

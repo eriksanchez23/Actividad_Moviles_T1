@@ -71,7 +71,10 @@ class LoginFragment : Fragment() {
         }
         if (estado.loginCorrecto) {
             viewModel.onEvent(LoginUiEvent.NavegacionRealizada)
-            findNavController().navigate(R.id.accion_login_a_home)
+            // Avoid navigating twice if the button is tapped again during the transition
+            if (findNavController().currentDestination?.id == R.id.loginFragment) {
+                findNavController().navigate(R.id.accion_login_a_home)
+            }
         }
     }
 
