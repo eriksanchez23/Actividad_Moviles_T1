@@ -7,7 +7,6 @@ data class RegistroUiState(
     val nombre: String = "",
     val correo: String = "",
     val contrasena: String = "",
-    val telefono: String = "",
     @StringRes val errorCorreo: Int? = null,
     @StringRes val errorContrasena: Int? = null,
     val botonHabilitado: Boolean = false

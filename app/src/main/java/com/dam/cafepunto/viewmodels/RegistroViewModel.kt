@@ -20,8 +20,6 @@ class RegistroViewModel : ViewModel() {
                 _uiState.update { validarCampos(it.copy(correo = evento.correo)) }
             is RegistroUiEvent.ContrasenaCambiada ->
                 _uiState.update { validarCampos(it.copy(contrasena = evento.contrasena)) }
-            is RegistroUiEvent.TelefonoCambiado ->
-                _uiState.update { validarCampos(it.copy(telefono = evento.telefono)) }
         }
     }
 
@@ -30,11 +28,10 @@ class RegistroViewModel : ViewModel() {
         val nombreValido = Validador.esNombreValido(estado.nombre)
         val correoValido = Validador.esCorreoValido(estado.correo)
         val contrasenaValida = Validador.esContrasenaValida(estado.contrasena)
-        val telefonoValido = Validador.esTelefonoValido(estado.telefono)
         return estado.copy(
             errorCorreo = if (estado.correo.isNotEmpty() && !correoValido) R.string.error_correo else null,
             errorContrasena = if (estado.contrasena.isNotEmpty() && !contrasenaValida) R.string.error_contrasena else null,
-            botonHabilitado = nombreValido && correoValido && contrasenaValida && telefonoValido
+            botonHabilitado = nombreValido && correoValido && contrasenaValida
         )
     }
 }

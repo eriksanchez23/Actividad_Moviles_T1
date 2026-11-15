@@ -43,7 +43,6 @@ class RegistroFragment : Fragment() {
         rellenarSiCambia(binding.registroTextoNombre, estado.nombre)
         rellenarSiCambia(binding.registroTextoCorreo, estado.correo)
         rellenarSiCambia(binding.registroTextoContrasena, estado.contrasena)
-        rellenarSiCambia(binding.registroTextoTelefono, estado.telefono)
 
         // Cada vez que se añade o borra una letra se avisa al ViewModel
         binding.registroTextoNombre.doOnTextChanged { texto, _, _, _ ->
@@ -54,9 +53,6 @@ class RegistroFragment : Fragment() {
         }
         binding.registroTextoContrasena.doOnTextChanged { texto, _, _, _ ->
             viewModel.onEvent(RegistroUiEvent.ContrasenaCambiada(texto.toString()))
-        }
-        binding.registroTextoTelefono.doOnTextChanged { texto, _, _, _ ->
-            viewModel.onEvent(RegistroUiEvent.TelefonoCambiado(texto.toString()))
         }
 
         binding.registroBotonRegistrate.setOnClickListener {

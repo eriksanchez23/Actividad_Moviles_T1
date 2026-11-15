@@ -10,6 +10,4 @@ object Validador {
     fun esContrasenaValida(contrasena: String): Boolean = contrasena.length >= 6
 
     fun esNombreValido(nombre: String): Boolean = nombre.trim().length >= 3
-
-    fun esTelefonoValido(telefono: String): Boolean = telefono.length == 9 && telefono.all { it.isDigit() }
 }
