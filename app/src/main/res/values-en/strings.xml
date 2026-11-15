@@ -7,8 +7,15 @@
     <string name="contrasena">Password</string>
     <string name="logo">Logo</string>
     <string name="nombre">Name</string>
-    <string name="telefono">Phone Number</string>
     <string name="icono_cargando">Loading icon</string>
     <string name="mandar_correo_cambiar_contrasena">Send email to reset password</string>
     <string name="iniciar_sesion">Log In</string>
+    <string name="home">HomeFragment</string>
+
+    <!-- Validation errors -->
+    <string name="error_correo">Enter a valid email address</string>
+    <string name="error_contrasena">Password must be at least 6 characters</string>
+
+    <!-- Toast messages -->
+    <string name="error_credenciales">Invalid or incorrect email or password</string>
 </resources>

@@ -7,8 +7,15 @@
     <string name="contrasena">Contraseña</string>
     <string name="logo">Logo</string>
     <string name="nombre">Nombre</string>
-    <string name="telefono">Teléfono</string>
     <string name="icono_cargando">Icono de carga</string>
     <string name="mandar_correo_cambiar_contrasena">Mandar correo para cambiar contraseña</string>
     <string name="iniciar_sesion">Iniciar Sesión</string>
+    <string name="home">HomeFragment</string>
+
+    <!-- Errores de validación -->
+    <string name="error_correo">Introduce un correo electrónico válido</string>
+    <string name="error_contrasena">La contraseña debe tener al menos 6 caracteres</string>
+
+    <!-- Mensajes Toast -->
+    <string name="error_credenciales">Correo o contraseña inválidos o incorrectos</string>
 </resources>
