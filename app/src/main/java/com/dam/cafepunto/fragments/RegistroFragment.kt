@@ -75,10 +75,8 @@ class RegistroFragment : Fragment() {
     }
 
     private fun mostrarEstado(estado: RegistroUiState) {
-        binding.registroCampoNombre.error = estado.errorNombre?.let { getString(it) }
         binding.registroCampoCorreo.error = estado.errorCorreo?.let { getString(it) }
         binding.registroCampoContrasena.error = estado.errorContrasena?.let { getString(it) }
-        binding.registroCampoTelefono.error = estado.errorTelefono?.let { getString(it) }
         binding.registroBotonRegistrate.isEnabled = estado.botonHabilitado
     }
 

@@ -16,9 +16,7 @@
     <!-- Validation errors -->
     <string name="error_correo">Enter a valid email address</string>
     <string name="error_contrasena">Password must be at least 6 characters</string>
-    <string name="error_nombre">Name must be at least 3 characters</string>
-    <string name="error_telefono">Phone number must have 9 digits</string>
 
     <!-- Toast messages -->
-    <string name="error_credenciales">Incorrect email or password</string>
+    <string name="error_credenciales">Invalid or incorrect email or password</string>
 </resources>

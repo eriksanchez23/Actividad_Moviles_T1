@@ -16,9 +16,7 @@
     <!-- Errores de validación -->
     <string name="error_correo">Introduce un correo electrónico válido</string>
     <string name="error_contrasena">La contraseña debe tener al menos 6 caracteres</string>
-    <string name="error_nombre">El nombre debe tener al menos 3 letras</string>
-    <string name="error_telefono">El teléfono debe tener 9 dígitos</string>
 
     <!-- Mensajes Toast -->
-    <string name="error_credenciales">Correo o contraseña incorrectos</string>
+    <string name="error_credenciales">Correo o contraseña inválidos o incorrectos</string>
 </resources>
