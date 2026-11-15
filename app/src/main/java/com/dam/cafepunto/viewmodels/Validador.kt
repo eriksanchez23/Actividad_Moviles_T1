@@ -1,4 +1,4 @@
-package com.dam.cafepunto.data
+package com.dam.cafepunto.viewmodels
 
 // Funciones de validación que usan los ViewModels
 object Validador {

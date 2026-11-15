@@ -1,4 +1,4 @@
-package com.dam.cafepunto.ui.inicio
+package com.dam.cafepunto.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

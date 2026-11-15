@@ -1,8 +1,7 @@
-package com.dam.cafepunto.ui.recuperar
+package com.dam.cafepunto.viewmodels
 
 import androidx.lifecycle.ViewModel
 import com.dam.cafepunto.R
-import com.dam.cafepunto.data.Validador
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

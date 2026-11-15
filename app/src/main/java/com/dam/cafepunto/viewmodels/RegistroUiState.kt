@@ -1,4 +1,4 @@
-package com.dam.cafepunto.ui.registro
+package com.dam.cafepunto.viewmodels
 
 import androidx.annotation.StringRes
 

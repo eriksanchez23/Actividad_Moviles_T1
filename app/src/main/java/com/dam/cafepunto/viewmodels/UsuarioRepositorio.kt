@@ -1,4 +1,4 @@
-package com.dam.cafepunto.data
+package com.dam.cafepunto.viewmodels
 
 // Modelo: usuario de prueba para poder autenticarse
 object UsuarioRepositorio {

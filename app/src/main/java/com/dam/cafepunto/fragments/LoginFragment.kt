@@ -1,4 +1,4 @@
-package com.dam.cafepunto.ui.login
+package com.dam.cafepunto.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,6 +14,9 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.dam.cafepunto.R
 import com.dam.cafepunto.databinding.FragmentLoginBinding
+import com.dam.cafepunto.viewmodels.LoginUiEvent
+import com.dam.cafepunto.viewmodels.LoginUiState
+import com.dam.cafepunto.viewmodels.LoginViewModel
 import kotlinx.coroutines.launch
 
 class LoginFragment : Fragment() {

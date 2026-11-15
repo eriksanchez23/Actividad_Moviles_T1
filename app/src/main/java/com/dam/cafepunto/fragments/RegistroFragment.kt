@@ -1,4 +1,4 @@
-package com.dam.cafepunto.ui.registro
+package com.dam.cafepunto.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,6 +14,9 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.dam.cafepunto.R
 import com.dam.cafepunto.databinding.FragmentRegistroBinding
+import com.dam.cafepunto.viewmodels.RegistroUiEvent
+import com.dam.cafepunto.viewmodels.RegistroUiState
+import com.dam.cafepunto.viewmodels.RegistroViewModel
 import kotlinx.coroutines.launch
 
 class RegistroFragment : Fragment() {

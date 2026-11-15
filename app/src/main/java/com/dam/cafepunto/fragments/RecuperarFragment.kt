@@ -1,4 +1,4 @@
-package com.dam.cafepunto.ui.recuperar
+package com.dam.cafepunto.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,6 +13,9 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.dam.cafepunto.R
 import com.dam.cafepunto.databinding.FragmentRecuperarBinding
+import com.dam.cafepunto.viewmodels.RecuperarUiEvent
+import com.dam.cafepunto.viewmodels.RecuperarUiState
+import com.dam.cafepunto.viewmodels.RecuperarViewModel
 import kotlinx.coroutines.launch
 
 class RecuperarFragment : Fragment() {

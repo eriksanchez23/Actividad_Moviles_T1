@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/inicioFragment"
-        android:name="com.dam.cafepunto.ui.inicio.InicioFragment"
+        android:name="com.dam.cafepunto.fragments.InicioFragment"
         tools:layout="@layout/fragment_inicio">
 
         <action
@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.dam.cafepunto.ui.login.LoginFragment"
+        android:name="com.dam.cafepunto.fragments.LoginFragment"
         tools:layout="@layout/fragment_login">
 
         <action
@@ -39,7 +39,7 @@
 
     <fragment
         android:id="@+id/registroFragment"
-        android:name="com.dam.cafepunto.ui.registro.RegistroFragment"
+        android:name="com.dam.cafepunto.fragments.RegistroFragment"
         tools:layout="@layout/fragment_registro">
 
         <action
@@ -50,7 +50,7 @@
 
     <fragment
         android:id="@+id/recuperarFragment"
-        android:name="com.dam.cafepunto.ui.recuperar.RecuperarFragment"
+        android:name="com.dam.cafepunto.fragments.RecuperarFragment"
         tools:layout="@layout/fragment_recuperar">
 
         <action
@@ -62,7 +62,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.dam.cafepunto.ui.home.HomeFragment"
+        android:name="com.dam.cafepunto.fragments.HomeFragment"
         tools:layout="@layout/fragment_home" />
 
 </navigation>

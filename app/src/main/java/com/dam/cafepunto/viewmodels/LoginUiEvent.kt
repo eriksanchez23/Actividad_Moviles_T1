@@ -1,4 +1,4 @@
-package com.dam.cafepunto.ui.login
+package com.dam.cafepunto.viewmodels
 
 // Eventos que la vista de Login envía al ViewModel
 sealed interface LoginUiEvent {

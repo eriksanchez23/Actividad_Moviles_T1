@@ -7,15 +7,18 @@ App Android con una única activity (`MainActivity` + `FragmentContainerView`) y
 ```
 com.dam.cafepunto
 ├── MainActivity.kt            Activity única; solo Registro permite girar la pantalla
-├── data/                      Modelo
-│   ├── UsuarioRepositorio.kt  Usuario de prueba para el login: demo@cafepunto.com / 123456
-│   └── Validador.kt           Funciones de validación de campos
-└── ui/                        Vista + ViewModel
-    ├── inicio/                InicioFragment
-    ├── login/                 LoginFragment, LoginViewModel, LoginUiState, LoginUiEvent
-    ├── registro/              RegistroFragment, RegistroViewModel, RegistroUiState, RegistroUiEvent
-    ├── recuperar/             RecuperarFragment, RecuperarViewModel, RecuperarUiState, RecuperarUiEvent
-    └── home/                  HomeFragment
+├── fragments/                 Vista
+│   ├── InicioFragment.kt
+│   ├── LoginFragment.kt
+│   ├── RegistroFragment.kt
+│   ├── RecuperarFragment.kt
+│   └── HomeFragment.kt
+└── viewmodels/                ViewModel y Modelo
+    ├── LoginViewModel.kt, LoginUiState.kt, LoginUiEvent.kt
+    ├── RegistroViewModel.kt, RegistroUiState.kt, RegistroUiEvent.kt
+    ├── RecuperarViewModel.kt, RecuperarUiState.kt, RecuperarUiEvent.kt
+    ├── UsuarioRepositorio.kt  Usuario de prueba para el login: demo@cafepunto.com / 123456
+    └── Validador.kt           Funciones de validación de campos
 ```
 
 - Cada fragment envía eventos (`UiEvent`) al ViewModel con `doOnTextChanged` y observa el `StateFlow<UiState>`.

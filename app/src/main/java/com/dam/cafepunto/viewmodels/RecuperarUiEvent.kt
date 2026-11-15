@@ -1,4 +1,4 @@
-package com.dam.cafepunto.ui.recuperar
+package com.dam.cafepunto.viewmodels
 
 // Eventos que la vista de Recuperar contraseña envía al ViewModel
 sealed interface RecuperarUiEvent {
