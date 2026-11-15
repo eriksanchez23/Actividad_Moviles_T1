@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CafePunto">
         <activity
-            android:name=".ActividadPrincipal"
+            android:name=".MainActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>

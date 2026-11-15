@@ -11,4 +11,18 @@
     <string name="icono_cargando">Loading icon</string>
     <string name="mandar_correo_cambiar_contrasena">Send email to reset password</string>
     <string name="iniciar_sesion">Log In</string>
+    <string name="home">HomeFragment</string>
+
+    <!-- Validation errors -->
+    <string name="error_correo">Enter a valid email address</string>
+    <string name="error_contrasena">Password must be at least 6 characters</string>
+    <string name="error_nombre">Name must be at least 3 characters</string>
+    <string name="error_telefono">Phone number must have 9 digits</string>
+
+    <!-- Toast messages -->
+    <string name="error_credenciales">Incorrect email or password</string>
+    <string name="error_usuario_existe">A user with that email already exists</string>
+    <string name="error_usuario_no_existe">There is no user with that email</string>
+    <string name="registro_correcto">User registered successfully</string>
+    <string name="correo_enviado">Recovery email sent</string>
 </resources>

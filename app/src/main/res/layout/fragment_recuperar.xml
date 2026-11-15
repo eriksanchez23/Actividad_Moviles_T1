@@ -4,17 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cuarto_Fragmento">
+    tools:context=".ui.recuperar.RecuperarFragment">
 
     <ImageView
         android:id="@+id/recuperar_imagen_logo"
-        android:layout_width="105dp"
+        android:layout_width="121dp"
         android:layout_height="95dp"
-        android:layout_marginStart="153dp"
-        android:layout_marginEnd="153dp"
-        android:layout_marginBottom="27dp"
+        android:layout_marginTop="32dp"
         android:contentDescription="@string/logo"
-        app:layout_constraintBottom_toTopOf="@+id/recuperar_texto_titulo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,49 +21,44 @@
         android:id="@+id/recuperar_texto_titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:layout_marginBottom="480dp"
+        android:layout_marginTop="16dp"
         android:text="@string/nombre_app"
         android:textSize="48sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recuperar_imagen_logo"
-        tools:ignore="TextSizeCheck" />
+        app:layout_constraintTop_toBottomOf="@id/recuperar_imagen_logo" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/recuperar_campo_correo"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="89dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="333dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/correo_electronico"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recuperar_texto_titulo">
+        app:layout_constraintTop_toBottomOf="@id/recuperar_texto_titulo">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/recuperar_texto_correo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/correo_electronico" />
+            android:inputType="textEmailAddress" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/recuperar_boton_enviar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="53dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginBottom="155dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:enabled="false"
         android:text="@string/mandar_correo_cambiar_contrasena"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recuperar_campo_correo" />
+        app:layout_constraintTop_toBottomOf="@id/recuperar_campo_correo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
