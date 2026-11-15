@@ -6,7 +6,4 @@ sealed interface RegistroUiEvent {
     data class CorreoCambiado(val correo: String) : RegistroUiEvent
     data class ContrasenaCambiada(val contrasena: String) : RegistroUiEvent
     data class TelefonoCambiado(val telefono: String) : RegistroUiEvent
-    data object BotonRegistroPulsado : RegistroUiEvent
-    data object MensajeMostrado : RegistroUiEvent
-    data object NavegacionRealizada : RegistroUiEvent
 }

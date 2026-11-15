@@ -2,8 +2,6 @@ package com.dam.cafepunto.ui.registro
 
 import androidx.lifecycle.ViewModel
 import com.dam.cafepunto.R
-import com.dam.cafepunto.data.Usuario
-import com.dam.cafepunto.data.UsuarioRepositorio
 import com.dam.cafepunto.data.Validador
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -25,9 +23,6 @@ class RegistroViewModel : ViewModel() {
                 _uiState.update { validarCampos(it.copy(contrasena = evento.contrasena)) }
             is RegistroUiEvent.TelefonoCambiado ->
                 _uiState.update { validarCampos(it.copy(telefono = evento.telefono)) }
-            RegistroUiEvent.BotonRegistroPulsado -> registrar()
-            RegistroUiEvent.MensajeMostrado -> _uiState.update { it.copy(mensajeToast = null) }
-            RegistroUiEvent.NavegacionRealizada -> _uiState.update { it.copy(registroCorrecto = false) }
         }
     }
 
@@ -44,15 +39,5 @@ class RegistroViewModel : ViewModel() {
             errorTelefono = if (estado.telefono.isNotEmpty() && !telefonoValido) R.string.error_telefono else null,
             botonHabilitado = nombreValido && correoValido && contrasenaValida && telefonoValido
         )
-    }
-
-    private fun registrar() {
-        val estado = _uiState.value
-        val usuario = Usuario(estado.nombre.trim(), estado.correo.trim(), estado.contrasena, estado.telefono)
-        if (UsuarioRepositorio.registrar(usuario)) {
-            _uiState.update { it.copy(registroCorrecto = true, mensajeToast = R.string.registro_correcto) }
-        } else {
-            _uiState.update { it.copy(mensajeToast = R.string.error_usuario_existe) }
-        }
     }
 }

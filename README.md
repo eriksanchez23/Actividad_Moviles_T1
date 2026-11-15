@@ -30,7 +30,3 @@ escritos se mantienen al girar porque el estado vive en `RegistroViewModel`.
 ## Idioma
 
 `res/values/strings.xml` (español) y `res/values-en/strings.xml` (inglés). La app usa el idioma del dispositivo.
-
-## Pruebas
-
-`./gradlew testDebugUnitTest` ejecuta `ValidadorTest`.

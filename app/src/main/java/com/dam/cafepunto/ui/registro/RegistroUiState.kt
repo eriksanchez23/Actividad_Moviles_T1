@@ -12,7 +12,5 @@ data class RegistroUiState(
     @StringRes val errorCorreo: Int? = null,
     @StringRes val errorContrasena: Int? = null,
     @StringRes val errorTelefono: Int? = null,
-    val botonHabilitado: Boolean = false,
-    @StringRes val mensajeToast: Int? = null,
-    val registroCorrecto: Boolean = false
+    val botonHabilitado: Boolean = false
 )

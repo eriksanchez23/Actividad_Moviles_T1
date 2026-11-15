@@ -21,8 +21,4 @@
 
     <!-- Mensajes Toast -->
     <string name="error_credenciales">Correo o contraseña incorrectos</string>
-    <string name="error_usuario_existe">Ya existe un usuario con ese correo</string>
-    <string name="error_usuario_no_existe">No existe ningún usuario con ese correo</string>
-    <string name="registro_correcto">Usuario registrado correctamente</string>
-    <string name="correo_enviado">Correo de recuperación enviado</string>
 </resources>

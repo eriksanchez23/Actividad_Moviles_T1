@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
-import android.widget.Toast
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -58,7 +57,7 @@ class RegistroFragment : Fragment() {
         }
 
         binding.registroBotonRegistrate.setOnClickListener {
-            viewModel.onEvent(RegistroUiEvent.BotonRegistroPulsado)
+            findNavController().navigate(R.id.accion_registro_a_login)
         }
 
         viewLifecycleOwner.lifecycleScope.launch {
@@ -78,15 +77,6 @@ class RegistroFragment : Fragment() {
         binding.registroCampoContrasena.error = estado.errorContrasena?.let { getString(it) }
         binding.registroCampoTelefono.error = estado.errorTelefono?.let { getString(it) }
         binding.registroBotonRegistrate.isEnabled = estado.botonHabilitado
-
-        estado.mensajeToast?.let {
-            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
-            viewModel.onEvent(RegistroUiEvent.MensajeMostrado)
-        }
-        if (estado.registroCorrecto) {
-            viewModel.onEvent(RegistroUiEvent.NavegacionRealizada)
-            findNavController().navigate(R.id.accion_registro_a_login)
-        }
     }
 
     override fun onDestroyView() {

@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -38,7 +37,7 @@ class RecuperarFragment : Fragment() {
             viewModel.onEvent(RecuperarUiEvent.CorreoCambiado(texto.toString()))
         }
         binding.recuperarBotonEnviar.setOnClickListener {
-            viewModel.onEvent(RecuperarUiEvent.BotonEnviarPulsado)
+            findNavController().navigate(R.id.accion_recuperar_a_login)
         }
 
         viewLifecycleOwner.lifecycleScope.launch {
@@ -51,18 +50,6 @@ class RecuperarFragment : Fragment() {
     private fun mostrarEstado(estado: RecuperarUiState) {
         binding.recuperarCampoCorreo.error = estado.errorCorreo?.let { getString(it) }
         binding.recuperarBotonEnviar.isEnabled = estado.botonHabilitado
-
-        estado.mensajeToast?.let {
-            Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
-            viewModel.onEvent(RecuperarUiEvent.MensajeMostrado)
-        }
-        if (estado.correoEnviado) {
-            viewModel.onEvent(RecuperarUiEvent.NavegacionRealizada)
-            // Avoid navigating twice if the button is tapped again during the transition
-            if (findNavController().currentDestination?.id == R.id.recuperarFragment) {
-                findNavController().navigate(R.id.accion_recuperar_a_login)
-            }
-        }
     }
 
     override fun onDestroyView() {

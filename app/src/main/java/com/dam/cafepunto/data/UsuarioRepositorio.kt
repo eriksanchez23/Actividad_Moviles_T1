@@ -1,29 +1,11 @@
 package com.dam.cafepunto.data
 
-// Modelo: datos de un usuario
-data class Usuario(
-    val nombre: String,
-    val correo: String,
-    val contrasena: String,
-    val telefono: String
-)
-
-// Modelo: guarda los usuarios en memoria (trae un usuario de prueba)
+// Modelo: usuario de prueba para poder autenticarse
 object UsuarioRepositorio {
 
-    private val usuarios = mutableListOf(
-        Usuario("Demo", "demo@cafepunto.com", "123456", "600000000")
-    )
-
-    fun existe(correo: String): Boolean =
-        usuarios.any { it.correo.equals(correo, ignoreCase = true) }
-
-    fun registrar(usuario: Usuario): Boolean {
-        if (existe(usuario.correo)) return false
-        usuarios.add(usuario)
-        return true
-    }
+    private const val CORREO = "demo@cafepunto.com"
+    private const val CONTRASENA = "123456"
 
     fun comprobarCredenciales(correo: String, contrasena: String): Boolean =
-        usuarios.any { it.correo.equals(correo, ignoreCase = true) && it.contrasena == contrasena }
+        correo.equals(CORREO, ignoreCase = true) && contrasena == CONTRASENA
 }

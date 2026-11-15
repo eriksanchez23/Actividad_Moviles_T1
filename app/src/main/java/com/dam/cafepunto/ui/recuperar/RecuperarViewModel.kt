@@ -2,7 +2,6 @@ package com.dam.cafepunto.ui.recuperar
 
 import androidx.lifecycle.ViewModel
 import com.dam.cafepunto.R
-import com.dam.cafepunto.data.UsuarioRepositorio
 import com.dam.cafepunto.data.Validador
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -18,9 +17,6 @@ class RecuperarViewModel : ViewModel() {
         when (evento) {
             is RecuperarUiEvent.CorreoCambiado ->
                 _uiState.update { validarCampos(it.copy(correo = evento.correo)) }
-            RecuperarUiEvent.BotonEnviarPulsado -> enviarCorreo()
-            RecuperarUiEvent.MensajeMostrado -> _uiState.update { it.copy(mensajeToast = null) }
-            RecuperarUiEvent.NavegacionRealizada -> _uiState.update { it.copy(correoEnviado = false) }
         }
     }
 
@@ -31,13 +27,5 @@ class RecuperarViewModel : ViewModel() {
             errorCorreo = if (estado.correo.isNotEmpty() && !correoValido) R.string.error_correo else null,
             botonHabilitado = correoValido
         )
-    }
-
-    private fun enviarCorreo() {
-        if (UsuarioRepositorio.existe(_uiState.value.correo.trim())) {
-            _uiState.update { it.copy(correoEnviado = true, mensajeToast = R.string.correo_enviado) }
-        } else {
-            _uiState.update { it.copy(mensajeToast = R.string.error_usuario_no_existe) }
-        }
     }
 }

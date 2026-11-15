@@ -6,7 +6,5 @@ import androidx.annotation.StringRes
 data class RecuperarUiState(
     val correo: String = "",
     @StringRes val errorCorreo: Int? = null,
-    val botonHabilitado: Boolean = false,
-    @StringRes val mensajeToast: Int? = null,
-    val correoEnviado: Boolean = false
+    val botonHabilitado: Boolean = false
 )
